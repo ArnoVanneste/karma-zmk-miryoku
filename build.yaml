@@ -14,8 +14,12 @@
 ---
 include:
   - board: xiao_ble
-    shield: karma_left
-  - board: xiao_ble
-    shield: karma_right
+    shield: karma_dongle
   - board: xiao_ble
     shield: settings_reset
+  - board: xiao_ble
+    shield: karma_left
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+  - board: xiao_ble
+    shield: karma_right
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
